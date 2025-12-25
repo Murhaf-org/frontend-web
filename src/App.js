@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-// IMPORTANT: عدّل هذا السطر ليشير إلى IP أو DNS تبع سيرفر الباك
-// إذا الباك على Private IP مثلاً 192.168.2.30 وبورت 4000:
-const API_BASE_URL = "http://192.168.2.30:4000";
+const API_BASE_URL = "alb-back-docker-env-370693046.us-east-2.elb.amazonaws.com:4000";
 
 function App() {
   const [notes, setNotes] = useState([]);
