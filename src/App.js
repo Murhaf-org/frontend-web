@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_BASE_URL = "alb-back-docker-env-370693046.us-east-2.elb.amazonaws.com";
+const API_BASE_URL = "http://alb-back-docker-env-xxx.elb.amazonaws.com";
 
 function App() {
   const [notes, setNotes] = useState([]);
