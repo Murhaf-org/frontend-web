@@ -24,7 +24,7 @@ jobs:
 
       - name: Deploy to frontend-az server
         run: |
-          ssh -o StrictHostKeyChecking=no ec2-user@${{ secrets.FRONTEND_AZ2 }} "
+          ssh -o StrictHostKeyChecking=no ec2-user@${{ secrets.FRONTEND_IP }} "
             docker login -u ${{ secrets.DOCKERHUB_USER }} -p ${{ secrets.DOCKERHUB_PASS }} &&
             docker pull ${{ secrets.DOCKERHUB_USER }}/${{ secrets.IMAGE_NAME }}:latest &&
             docker stop ${{ secrets.CONTAINER_NAME }} || true &&
